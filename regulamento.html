@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="regulamento.css">
+    <title>REGULAMENTO</title>
+   
+</head>
+<body>
+    <div class="cabecalho">
+        <img alt="Arena PJ Logo" src="Imagens/Logo arenapj com escrita transp.png"/>
+        <div class="menu-toggle" onclick="alternarMenu()">
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
+        <div class="navegacao">
+            <a href="index.html">HOME</a>
+            <a href="#">JUF</a>
+            <a href="#">ATLÉTICAS</a>
+            <a href="regulamento.html">REGULAMENTO</a>
+            <a href="#">CONTATO</a>
+        </div>
+    </div>
+
+    <div class="menu-lateral">
+        <span class="fechar" onclick="alternarMenu()">×</span>
+        <a href="index.html">HOME</a>
+        <a href="#">JUF</a>
+        <a href="#">ATLÉTICAS</a>
+        <a href="regulamento.html">REGULAMENTO</a>
+        <a href="#">CONTATO</a>
+    </div>
+
+    <div class="conteudo-central">
+        <h1>REGULAMENTO</h1>
+        <p>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
+        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Minima necessitatibus quasi dignissimos ea modi, perferendis quaerat quas soluta vel reiciendis neque minus nam in accusantium a fuga officia, molestias nostrum!
+        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Modi ipsa possimus laborum labore unde! Culpa iure explicabo nesciunt et! Esse officia blanditiis harum dicta deserunt natus labore architecto, nulla laboriosam?
+        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quis obcaecati quae vero quos fugiat veniam iusto unde! Quos numquam incidunt natus voluptatibus neque culpa, cupiditate dolor voluptatem facere, ducimus aperiam?
+        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Natus dicta temporibus, illum facilis, totam hic dolor quos quod eaque consequatur iusto id, pariatur voluptatum quidem! Totam qui deleniti reprehenderit ex!
+        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Accusamus quibusdam consequuntur optio explicabo quas nulla vel excepturi pariatur quisquam culpa expedita eaque sunt, assumenda voluptatibus, harum itaque beatae vitae magni.
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Nobis maxime ea obcaecati dolorum voluptas repudiandae quis, ad fugiat, quae unde voluptatum voluptate et laudantium! Quis aspernatur aliquid voluptatem iste adipisci?
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed necessitatibus esse commodi. Molestiae distinctio nam accusantium, cum, nisi culpa, ad odit illo quod nostrum adipisci fuga asperiores pariatur laborum exercitationem!
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur velit recusandae, distinctio sequi, autem suscipit et vitae ipsum nostrum beatae doloribus. Voluptatem labore nobis sit ullam recusandae deleniti id maxime?
+        </p>
+    </div>
+
+    <div class="rodape-apoio">
+        <p>
+         Apoio
+        </p>
+        <img alt="Ciências da Computação Logo" src="Imagens/logo comp.png"/>
+        <img alt="UNIFAGOC Logo" src="Imagens/Logo Unifagoc.png"/>
+        <img alt="JUF Logo" src="Imagens/Prancheta 1 cópia.png"/>
+        <img alt="Polícia militar logo" src="Imagens/logo Pm.jpeg"/>
+       </div>
+
+    <footer>
+        <p>© 2024 Arena PJ. Todos os direitos reservados.</p>
+    </footer>
+
+    <script>
+        function alternarMenu() {
+            var menuLateral = document.querySelector('.menu-lateral');
+            var menuToggle = document.querySelector('.menu-toggle');
+            if (menuLateral.style.display === 'flex') {
+                menuLateral.style.display = 'none';
+                menuToggle.classList.remove('ativo');
+            } else {
+                menuLateral.style.display = 'flex';
+                menuToggle.classList.add('ativo');
+            }
+        }
+    </script>
+</body>
+</html>

@@ -7,208 +7,8 @@
   </title>
   <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet"/>
   <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&amp;display=swap" rel="stylesheet"/>
-  <style>
-   body {
-            font-family: 'Roboto', sans-serif;
-            margin: 0;
-            padding: 0;
-            background-color: #f0f0f0;
-        }
-        .cabecalho {
-            background-color: rgb(60, 132, 118);
-            padding: 10px 20px;
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            color: white;
-        }
-        .cabecalho img {
-            height: 50px;
-        }
-        .navegacao {
-            display: flex;
-            justify-content: center;
-            background-color: rgb(60, 132, 118);
-            padding: 10px 0;
-        }
-        .navegacao a {
-            color: white;
-            text-decoration: none;
-            margin: 0 15px;
-            font-weight: bold;
-            position: relative; 
-        }
+  <link rel="stylesheet" href="home.css">
 
-                .navegacao a::after {
-            content: '';
-            position: absolute;
-            bottom: 0;
-            left: 0;
-            width: 0;
-            height: 2px; 
-            background-color: white; 
-            transition: width 0.3s ease-in-out; 
-        }
-
-        .navegacao a:hover::after {
-            width: 100%; 
-        }
-
-
-        .banner {
-            position: relative;
-            text-align: center;
-            color: white;
-        }
-        .banner img {
-            width: 100%;
-            height: 300px;
-            object-fit: cover;
-        }
-        .conteudo {
-            padding: 20px;
-            text-align: center;
-        }
-        .conteudo h2 {
-            color: rgb(39, 99, 87);
-            margin-bottom: 20px;
-        }
-
-        
-        .jogos {
-                display: grid;
-                grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-                gap: 10px;
-                justify-content: center;
-                max-width: 1200px;
-                margin: 0 auto;
-            }
-            .cartao-jogo {
-                background-color: rgb(246, 248, 245);
-                border-radius: 10px;
-                box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-                padding: 15px;
-                text-align: left;
-                position: relative;
-                overflow: hidden;
-                display: flex;
-                flex-direction: column;
-                transition: transform 0.3s ease, box-shadow 0.3s ease; 
-            }
-
-                        .cartao-jogo:hover {
-                transform: scale(1.03); 
-                box-shadow: 0 0 15px rgba(0, 0, 0, 0.2); 
-}
-            .cartao-jogo h3 {
-                color: rgb(39, 99, 87);
-                margin: 0;
-                font-size: 1.1em;
-                white-space: nowrap;
-                overflow: hidden;
-                text-overflow: ellipsis;
-            }
-            .cartao-jogo p {
-                margin: 5px 0;
-                color: rgb(60, 132, 118);
-            }
-
-
-        .sinal-ao-vivo {
-            position: absolute;
-            top: 10px;
-            right: 10px;
-            background-color: rgba(60, 132, 118, 0.507);
-            color: rgb(39, 99, 87);
-            padding: 3px 7px;
-            border-radius: 5px;
-            font-size: 0.7em;
-            font-weight: bold;
-            white-space: nowrap;
-            z-index: 1;
-        }
-        .rodape {
-            background-color: rgb(60, 132, 118);
-            color: white;
-            text-align: center;
-            padding: 20px 0;
-        }
-        .rodape-apoio {
-            background-color: rgb(246, 248, 245);
-            color: rgb(60, 132, 118);
-            text-align: center;
-            padding: 20px 0;
-        }
-        .rodape-apoio img {
-            height: 50px;
-            margin: 0 10px;
-        }
-        .menu-toggle {
-            display: none;
-            flex-direction: column;
-            cursor: pointer;
-        }
-        .menu-toggle div {
-            width: 25px;
-            height: 3px;
-            background-color: white;
-            margin: 4px 0;
-            transition: all 0.3s ease;
-        }
-        .menu-toggle.ativo div:nth-child(1) {
-            transform: rotate(45deg) translate(5px, 5px);
-        }
-        .menu-toggle.ativo div:nth-child(2) {
-            opacity: 0;
-        }
-        .menu-toggle.ativo div:nth-child(3) {
-            transform: rotate(-45deg) translate(5px, -5px);
-        }
-        .menu-lateral {
-            display: none;
-            flex-direction: column;
-            position: fixed;
-            top: 0;
-            right: 0;
-            width: 250px;
-            height: 100%;
-            background-color: rgb(60, 132, 118);
-            padding: 20px;
-            box-shadow: -2px 0 5px rgba(0, 0, 0, 0.5);
-            z-index: 1000;
-        }
-        .menu-lateral a {
-            color: white;
-            text-decoration: none;
-            margin: 10px 0;
-            font-weight: bold;
-        }
-        .menu-lateral .fechar {
-            align-self: flex-end;
-            cursor: pointer;
-            font-size: 1.5em;
-            color: white;
-        }
-        @media (max-width: 768px) {
-            .navegacao {
-                display: none;
-            }
-            .menu-toggle {
-                display: flex;
-            }
-            .cartao-jogo {
-                padding: 10px;
-                flex-direction: column;
-                align-items: flex-start;
-            }
-            .sinal-ao-vivo {
-                top: 5px;
-                right: 5px;
-                padding: 2px 5px;
-                font-size: 0.6em;
-            }
-        }
-  </style>
   <script>
    function alternarMenu() {
             var menuLateral = document.querySelector('.menu-lateral');
@@ -244,7 +44,7 @@
     <a href="#">
      ATLÉTICAS
     </a>
-    <a href="#">
+    <a href="regulamento.html">
      REGULAMENTO
     </a>
     <a href="#">
@@ -265,7 +65,7 @@
    <a href="#">
     ATLÉTICAS
    </a>
-   <a href="#">
+   <a href="regulamento.html">
     REGULAMENTO
    </a>
    <a href="#">
@@ -453,6 +253,7 @@
    <img alt="Ciências da Computação Logo" src="Imagens/logo comp.png"/>
    <img alt="UNIFAGOC Logo" src="Imagens/Logo Unifagoc.png"/>
    <img alt="JUF Logo" src="Imagens/Prancheta 1 cópia.png"/>
+   <img alt="Polícia militar logo" src="Imagens/logo Pm.jpeg"/>
   </div>
   <div class="rodape">
    <p>
