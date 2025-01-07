@@ -1,0 +1,257 @@
+
+   body {
+            margin: 0;
+            font-family: 'Roboto', sans-serif;
+            background-color: #e0e0e0;
+        }
+       
+        .main {
+            text-align: center;
+            padding: 20px;
+        }
+        .main h1 {
+            color: #2f6d5d;
+            font-size: 36px;
+        }
+        .games {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap:20px;
+            margin: 20px 0;
+        }
+        .game-card {
+            background-color:  rgb(246, 248, 245);
+            border-radius: 20px; 
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); 
+            width: 100%;
+            max-width: 400px; 
+            padding: 20px;
+            text-align: center;
+            position: relative; 
+            box-sizing: border-box; 
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .game-card:hover {
+            transform: scale(1.03);
+            box-shadow: 0 0 15px  rgba(39, 99, 87, 0.719);
+        }
+
+
+
+
+        .game-card img {
+            height: 10px;
+        }
+        .game-card .teams {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .game-card .teams div:first-child {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            text-align: left;
+            color: #2f6d5d; 
+        }
+        .game-card .teams div:first-child .team-name {
+            display: flex;
+            align-items: center;
+        }
+        .game-card .teams div:first-child img {
+            margin-left: 10px;
+        }
+        .game-card .teams div:last-child {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-end;
+            text-align: right;
+            color: #2f6d5d;
+        }
+        .game-card .teams div:last-child .team-name {
+            display: flex;
+            align-items: center;
+        }
+        .game-card .teams div:last-child img {
+            margin-left: 10px;
+        }
+        .game-card .teams .versus {
+            font-size: 36px;
+            color: #2f6d5d;
+        }
+        .game-card .score {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-size: 24px;
+            font-weight: bold;
+            margin: 10px 0;
+        }
+        .game-card .score div {
+            font-size: 72px;
+            margin-top: 10px; 
+        }
+        .game-card .date {
+            font-size: 18px;
+            color: #888;
+            position: absolute;
+            top: 60%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+        .game-card .futsal {
+            font-size: 14px;
+            color: #2f6d5d;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+      
+        .footer {
+            background-color: #2f6d5d;
+            color: white;
+            text-align: center;
+            padding: 10px 0;
+        }
+
+
+        .cabecalho {
+            background-color: rgb(60, 132, 118);
+            padding: 10px 20px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            color: white;
+        }
+
+        .cabecalho img {
+            height: 50px;
+        }
+
+        .navegacao {
+            display: flex;
+            justify-content: center;
+            background-color: rgb(60, 132, 118);
+            padding: 10px 0;
+        }
+
+        .navegacao a {
+            color: white;
+            text-decoration: none;
+            margin: 0 15px;
+            font-weight: bold;
+            position: relative;
+        }
+
+        .navegacao a::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background-color: white;
+            transition: width 0.3s ease-in-out;
+        }
+
+        .navegacao a:hover::after {
+            width: 100%;
+        }
+
+
+        .menu-toggle {
+            display: none;
+            flex-direction: column;
+            cursor: pointer;
+        }
+
+        .menu-toggle div {
+            width: 25px;
+            height: 3px;
+            background-color: white;
+            margin: 4px 0;
+            transition: all 0.3s ease;
+        }
+
+        .menu-toggle.ativo div:nth-child(1) {
+            transform: rotate(45deg) translate(5px, 5px);
+        }
+
+        .menu-toggle.ativo div:nth-child(2) {
+            opacity: 0;
+        }
+
+        .menu-toggle.ativo div:nth-child(3) {
+            transform: rotate(-45deg) translate(5px, -5px);
+        }
+
+        .menu-lateral {
+            display: none;
+            flex-direction: column;
+            position: fixed;
+            top: 0;
+            right: 0;
+            width: 250px;
+            height: 100%;
+            background-color: rgb(60, 132, 118);
+            padding: 20px;
+            box-shadow: -2px 0 5px rgba(0, 0, 0, 0.5);
+            z-index: 1000;
+        }
+
+        .menu-lateral a {
+            color: white;
+            text-decoration: none;
+            margin: 10px 0;
+            font-weight: bold;
+        }
+
+        .menu-lateral .fechar {
+            align-self: flex-end;
+            cursor: pointer;
+            font-size: 1.5em;
+            color: white;
+        }
+
+        .rodape {
+            background-color: rgb(60, 132, 118);
+            color: white;
+            text-align: center;
+            padding: 20px 0;
+        }
+        .rodape-apoio {
+            background-color: rgb(246, 248, 245);
+            color: rgb(60, 132, 118);
+            text-align: center;
+            padding: 20px 0;
+        }
+        .rodape-apoio img {
+            height: 50px;
+            margin: 0 10px;
+        }
+
+
+
+
+
+
+
+        @media (min-width: 768px) {
+            .game-card {
+                flex: 1 1 calc(33.333% - 40px); /* 3 cards per row with gap */
+            }
+        }
+
+          @media (max-width: 768px) {
+            .navegacao {
+                display: none;
+            }
+
+            .menu-toggle {
+                display: flex;
+            }
+        }
+  
