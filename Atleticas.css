@@ -1,8 +1,12 @@
+
 body {
     font-family: 'Roboto', sans-serif;
     margin: 0;
     padding: 0;
     background-color: #f0f0f0;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
 }
 
 .cabecalho {
@@ -33,8 +37,76 @@ body {
     position: relative;
 }
 
+.navegacao a::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background-color: white;
+    transition: width 0.3s ease-in-out;
+}
+
 .navegacao a:hover::after {
     width: 100%;
+}
+
+
+
+
+.menu-toggle {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+}
+
+.menu-toggle div {
+    width: 25px;
+    height: 3px;
+    background-color: white;
+    margin: 4px 0;
+    transition: all 0.3s ease;
+}
+
+.menu-toggle.ativo div:nth-child(1) {
+    transform: rotate(45deg) translate(5px, 5px);
+}
+
+.menu-toggle.ativo div:nth-child(2) {
+    opacity: 0;
+}
+
+.menu-toggle.ativo div:nth-child(3) {
+    transform: rotate(-45deg) translate(5px, -5px);
+}
+
+.menu-lateral {
+    display: none;
+    flex-direction: column;
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 250px;
+    height: 100%;
+    background-color: rgb(60, 132, 118);
+    padding: 20px;
+    box-shadow: -2px 0 5px rgba(0, 0, 0, 0.5);
+    z-index: 1000;
+}
+
+.menu-lateral a {
+    color: white;
+    text-decoration: none;
+    margin: 10px 0;
+    font-weight: bold;
+}
+
+.menu-lateral .fechar {
+    align-self: flex-end;
+    cursor: pointer;
+    font-size: 1.5em;
+    color: white;
 }
 
 .rodape {
@@ -43,75 +115,107 @@ body {
     text-align: center;
     padding: 20px 0;
 }
-
 .rodape-apoio {
     background-color: rgb(246, 248, 245);
     color: rgb(60, 132, 118);
     text-align: center;
     padding: 20px 0;
 }
-
 .rodape-apoio img {
     height: 50px;
     margin: 0 10px;
 }
 
-.atleticas-container {
+.container {
+    width: 100%;
     max-width: 1200px;
     margin: 0 auto;
-    padding: 20px; 
-    background-color: white;
-    border-radius: 10px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    background-color: #f0f0f0;
+    padding: 20px;
+    box-sizing: border-box;
 }
 
 .atletica {
-    display: flex;
-    align-items: center;
-    margin: 40px; 
-    background-color: #f8f8f8;
-    padding: 15px;
-    border-radius: 10px;
-    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+    margin-bottom: 60px; 
 }
 
-.atletica img {
-    height: 100px; 
-    margin-right: 20px;
-    border-radius: 5px;
-    object-fit: contain;
-    width: 100px; 
-    background-color: #dcdcdc; 
+.image-container {
+    width: 100%;
+    margin-bottom: 20px;
+    text-align: center;
 }
-
-.atletica .descricao {
-    flex: 1;
+.image-container img {
+    max-width: 100%;
+    height: auto;
 }
-
-.atletica h2 {
+.image-container p {
+    margin-top: 10px;
+    font-size: 14px;
+    color: #666;
+}
+.text-container {
+    width: 100%;
+    text-align: center;
+}
+.text-container h1 {
+    font-size: 48px;
+    color: rgb(60, 132, 118);
     margin: 0;
-    color: rgb(39, 99, 87);
-    font-size: 1.5em;
 }
-
-.atletica p {
-    margin: 10px 0 0;
-    color: rgb(80, 80, 80);
-    font-size: 0.9em;
+.text-container h1 i {
+    font-size: 24px;
+    color: #2f7d4e;
+}
+.text-container p {
+    font-size: 14px;
+    color: #333;
+    line-height: 1.6;
 }
 
 
 @media (max-width: 768px) {
-    .atletica {
-        flex-direction: column;
-        align-items: flex-start;
-        text-align: left;
+    .navegacao {
+        display: none;
     }
 
-    .atletica img {
-        margin: 0 0 -85px;
+    .menu-toggle {
+        display: flex;
+    }
+
+    .text-container h1 {
+        font-size: 36px;
+    }
+    .text-container h1 i {
+        font-size: 18px;
+    }
+
+}
+
+@media (min-width: 769px) {
+    .container {
+        text-align: left;
+    }
+    .image-container, .text-container {
+        display: inline-block;
+        vertical-align: top;
+    }
+    .image-container {
+        width: 20%;
+    }
+    .text-container {
+        width: 65%;
+        padding-left: 20px;
+        text-align: left;
     }
 }
 
+footer {
+    background-color: rgb(60, 132, 118);
+    color: white;
+    text-align: center;
+    padding: 10px 20px;
+}
 
-
+footer p {
+    margin: 0;
+}
