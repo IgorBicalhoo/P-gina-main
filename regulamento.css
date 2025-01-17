@@ -68,11 +68,10 @@
         }
 
         .conteudo-central p {
-            max-width: 600px;
+            max-width: 900px;
             background-color: #fff;
             padding: 20px;
-            border: 1px solid rgb(60, 132, 118);
-            border-radius: 8px;
+           
             color: #333;
             word-wrap: break-word;
             box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
