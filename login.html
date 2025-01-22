@@ -1,0 +1,85 @@
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>REGULAMENTO</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="login.css">
+</head>
+
+<body>
+    <div class="cabecalho">
+        <img alt="Arena PJ Logo" src="Imagens/Logo arenapj com escrita transp.png" />
+        <div class="menu-toggle" onclick="alternarMenu()">
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
+        <div class="navegacao">
+            <a href="index.html">HOME</a>
+            <a href="JUF.html">JUF</a>
+            <a href="Atleticas.html">ATLÉTICAS</a>
+            <a href="regulamento.html">REGULAMENTO</a>
+            <a href="encerrados.html">ENCERRADOS</a>
+        </div>
+    </div>
+
+    <div class="menu-lateral">
+        <span class="fechar" onclick="alternarMenu()">×</span>
+        <a href="index.html">HOME</a>
+        <a href="#">JUF</a>
+        <a href="Atleticas.html">ATLÉTICAS</a>
+        <a href="regulamento.html">REGULAMENTO</a>
+        <a href="encerrados.html">ENCERRADOS</a>
+    </div>
+
+    <div class="conteudo-central">
+        <div class="login-container">
+            <h2>FAÇA LOGIN</h2>
+            <form action="opcoes.html" method="post">
+                <label for="email">E-MAIL</label>
+                <input type="email" id="email" name="email" required>
+                <label for="password">SENHA</label>
+                <input type="password" id="password" name="password" required>
+                <label for="access-level">NÍVEL DE ACESSO</label>
+                <select id="access-level" name="access-level">
+                    <option value="moderador">Moderador</option>
+                    <option value="administrador">Administrador</option>
+                    <option value="poder-total">Poder Total</option>
+                </select>
+                <button type="submit">LOGIN</button>
+            </form>
+        </div>
+    </div>
+    
+
+
+    <div class="rodape-apoio">
+        <p>Apoio</p>
+        <img alt="Ciências da Computação Logo" src="Imagens/logo comp.png" />
+        <img alt="UNIFAGOC Logo" src="Imagens/Logo Unifagoc.png" />
+        <img alt="JUF Logo" src="Imagens/Prancheta 1 cópia.png" />
+    </div>
+
+    <footer>
+        <p>© 2024 Arena PJ </p>
+    </footer>
+
+    <script>
+        function alternarMenu() {
+            var menuLateral = document.querySelector('.menu-lateral');
+            var menuToggle = document.querySelector('.menu-toggle');
+            if (menuLateral.style.display === 'flex') {
+                menuLateral.style.display = 'none';
+                menuToggle.classList.remove('ativo');
+            } else {
+                menuLateral.style.display = 'flex';
+                menuToggle.classList.add('ativo');
+            }
+        }
+    </script>
+</body>
+
+</html>
