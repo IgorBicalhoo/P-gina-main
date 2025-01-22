@@ -3,10 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Login</title>
+    <title>Cadastro</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="login.css">
+    <link rel="stylesheet" href="cadastro.css">
 </head>
 
 <body>
@@ -37,15 +37,21 @@
 
     <div class="conteudo-central">
         <div class="login-container">
-            <h2>FAÇA LOGIN</h2>
+            <h2>CADASTRO</h2>
             <form action="opcoes.html" method="post">
                 <label for="email">E-MAIL</label>
                 <input type="email" id="email" name="email" required>
                 <label for="password">SENHA</label>
                 <input type="password" id="password" name="password" required>
-                <button type="submit">LOGIN</button>
+                <label for="access-level">NÍVEL DE ACESSO</label>
+                <select id="access-level" name="access-level">
+                    <option value="moderador">Moderador</option>
+                    <option value="administrador">Administrador</option>
+                    <option value="poder-total">Poder Total</option>
+                </select>
+                <button type="submit">CADASTRAR</button>
             </form>
-            <a id="CADASTRAR" href="cadastro.html">CADASTRAR</a>
+           
         </div>
     </div>
     
